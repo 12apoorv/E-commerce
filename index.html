@@ -1,124 +1,421 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E-commerce Website</title>
-    <link rel="stylesheet" href="product.css">
+    <title>InnovateTech E-commerce</title>
+    <style>
+        /* Basic styling */
+        body {
+            font-family: Arial, sans-serif;
+            color: #333333;
+            margin: 0;
+            padding: 0;
+            background: url('images/laptop-background.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+        header {
+            background-color: rgba(244, 244, 244, 0.9);
+            color: #333333;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: space-around;
+            background-color: rgba(224, 224, 224, 0.9);
+            padding: 10px;
+        }
+        nav a {
+            color: #333333;
+            text-decoration: none;
+        }
+        .content {
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            margin: 0 auto;
+            max-width: 1200px;
+        }
+        .product {
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin: 15px;
+            text-align: center;
+            background-color: #f9f9f9;
+            color: #333333;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .product img {
+            max-width: 100%;
+            transition: transform 0.2s;
+            border: 1px solid #ddd;
+            padding: 10px;
+        }
+        .form-container {
+            width: 300px;
+            margin: auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            color: #333333;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+            background-color: #ffffff;
+            color: #333333;
+            border: 1px solid #ddd;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #5cb85c;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #4cae4c;
+        }
+        .cart-item {
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid #ddd;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        .cart-item img {
+            max-width: 80px;
+            margin-right: 10px;
+        }
+        .cart-item .details {
+            flex-grow: 1;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+        .pulse {
+            animation: pulse-animation 0.3s;
+        }
+        @keyframes pulse-animation {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        footer {
+            background-color: rgba(244, 244, 244, 0.9);
+            color: #333333;
+            padding: 10px;
+            text-align: center;
+        }
+        footer p {
+            margin: 5px 0;
+        }
+    </style>
 </head>
 <body>
     <header>
+        <h1>InnovateTech</h1>
         <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#product">Product</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="#register">Register</a></li>
-                <li><a href="#login">Login</a></li>
-            </ul>
+            <a href="#home">Home</a>
+            <a href="#products">Products</a>
+            <a href="#about">About Us</a>
+            <a href="#contact">Contact</a>
+            <a href="#cart">Cart</a>
+            <a href="#register">Register</a>
+            <a href="#login">Login</a>
+            <a href="#order-history">Order History</a>
+            <a href="#customer-support">Customer Support</a>
         </nav>
     </header>
-    <main>
-        <!-- Home Section -->
-        <section id="home">
-            <h1>Home</h1>
-            <p>Welcome to our e-commerce website!</p>
-        </section>
-
-        <!-- Product Section -->
-        <section id="product">
-            <h1>Product</h1>
-            <img src="product-image.jpg" alt="Product Image">
-            <p>Product Description</p>
-            <button>Add to Cart</button>
-        </section>
-
-        <!-- About Us Section -->
-        <section id="about">
-            <h1>About Us</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</p>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact">
-            <h1>Contact Us</h1>
-            <form id="contact-form">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name"><br><br>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email"><br><br>
-                <label for="message">Message:</label>
-                <textarea id="message" name="message"></textarea><br><br>
-                <button type="submit">Send</button>
-            </form>
-        </section>
-
-        <!-- Register Section -->
-        <section id="register">
-            <h1>Register</h1>
-            <form id="register-form">
-                <label for="username">Username:</label>
-                <input type="text" id="username" name="username"><br><br>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email"><br><br>
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password"><br><br>
-                <label for="confirm-password">Confirm Password:</label>
-                <input type="password" id="confirm-password" name="confirm-password"><br><br>
+    <div class="content" id="home">
+        <h2>Welcome to InnovateTech</h2>
+        <img src="images/download.jpg" alt="Welcome Image" style="width:100%; max-height: 300px; object-fit: cover;">
+        <p>Your favorite place for the latest tech stuff.</p>
+    </div>
+    <div class="content" id="products">
+        <h2>Product Catalog</h2>
+        <div>
+            <label for="sort">Sort by:</label>
+            <select id="sort">
+                <option value="name">Name</option>
+                <option value="price">Price</option>
+            </select>
+        </div>
+        <div id="product-list">
+            <div class="product" data-name="UltraBook Pro" data-price="1199">
+                <h2>UltraBook Pro</h2>
+                <img src="images/1111.jpg" alt="UltraBook Pro">
+                <p>The UltraBook Pro offers an ultra-slim design, with a 14-inch 4K display, Intel i7 processor, 16GB RAM, and 512GB SSD. Perfect for professionals on the go.</p>
+                <p>Price: $1199</p>
+                <button class="add-to-cart-button">Add to Cart</button>
+            </div>
+            <div class="product" data-name="Gaming Beast X" data-price="2499">
+                <h2>Gaming Beast X</h2>
+                <img src="images/2222.jpg" alt="Gaming Beast X">
+                <p>The Gaming Beast X features a 17.3-inch Full HD screen, Intel i9 processor, 32GB RAM, and 1TB SSD. Equipped with an NVIDIA RTX 3080 for the ultimate gaming experience.</p>
+                <p>Price: $2499</p>
+                <button class="add-to-cart-button">Add to Cart</button>
+            </div>
+            <div class="product" data-name="TechPad Mini" data-price="799">
+                <h2>TechPad Mini</h2>
+                <img src="images/3333.jpg" alt="TechPad Mini">
+                <p>The TechPad Mini is a versatile 2-in-1 laptop with a 12.5-inch touchscreen display, Intel i5 processor, 8GB RAM, and 256GB SSD. Ideal for students and professionals alike.</p>
+                <p>Price: $799</p>
+                <button class="add-to-cart-button">Add to Cart</button>
+            </div>
+            <div class="product" data-name="WorkStation Pro" data-price="1599">
+                <h2>WorkStation Pro</h2>
+                <img src="images/4444.jpg" alt="WorkStation Pro">
+                <p>The WorkStation Pro is designed for high-performance tasks, featuring a 15.6-inch display, AMD Ryzen 7 processor, 16GB RAM, and 1TB SSD. Ideal for video editing and software development.</p>
+                <p>Price: $1599</p>
+                <button class="add-to-cart-button">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+    <div class="content" id="cart">
+        <h2>Shopping Cart</h2>
+        <div id="cart-items">
+            <!-- Cart items will be dynamically added here -->
+        </div>
+        <div id="cart-total">
+            <strong>Total: $<span>0.00</span></strong>
+        </div>
+    </div>
+    <div class="content" id="order-history">
+        <h2>Order History</h2>
+        <table>
+            <tr>
+                <th>Order ID</th>
+                <th>Date</th>
+                <th>Items</th>
+                <th>Total</th>
+                <th>Status</th>
+            </tr>
+            <tr>
+                <td>12345</td>
+                <td>2023-08-01</td>
+                <td>Product 1, Product 2</td>
+                <td>$200</td>
+                <td>Shipped</td>
+            </tr>
+        </table>
+    </div>
+    <div class="content" id="register">
+        <h2>Register</h2>
+        <div class="form-container">
+            <form id="registerForm">
+                <div class="form-group">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password:</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" required>
+                </div>
                 <button type="submit">Register</button>
             </form>
-        </section>
-
-        <!-- Login Section -->
-        <section id="login">
-            <h1>Login</h1>
-            <form id="login-form">
-                <label for="username">Username:</label>
-                <input type="text" id="username" name="username"><br><br>
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password"><br><br>
+        </div>
+    </div>
+    <div class="content" id="login">
+        <h2>Login</h2>
+        <div class="form-container">
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="loginEmail">Email:</label>
+                    <input type="email" id="loginEmail" name="loginEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">Password:</label>
+                    <input type="password" id="loginPassword" name="loginPassword" required>
+                </div>
                 <button type="submit">Login</button>
             </form>
-        </section>
-    </main>
+        </div>
+    </div>
+    <div class="content" id="customer-support">
+        <h2>Customer Support</h2>
+        <p>If you have any questions or need assistance, please reach out to us through the following options:</p>
+        <div class="form-container">
+            <form id="supportForm">
+                <div class="form-group">
+                    <label for="supportName">Name:</label>
+                    <input type="text" id="supportName" name="supportName" required>
+                </div>
+                <div class="form-group">
+                    <label for="supportEmail">Email:</label>
+                    <input type="email" id="supportEmail" name="supportEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="supportMessage">Message:</label>
+                    <textarea id="supportMessage" name="supportMessage" required></textarea>
+                </div>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+        <div>
+            <h3>Live Chat</h3>
+            <!-- Live Chat Widget -->
+            <div id="tawk-live-chat"></div>
+        </div>
+    </div>
     <footer>
-        <p>&copy; 2023 Company Name</p>
+        <p>Contact Us:</p>
+        <p>Phone: +1 (800) 555-1234</p>
+        <p>Email: support@innovate-tech.com</p>
+        <p>&copy; 2024 InnovateTech. All rights reserved.</p>
     </footer>
-
-    <!-- Client-side validation script -->
     <script>
-        // Register form validation
-        document.getElementById('register-form').addEventListener('submit', function(event) {
-            event.preventDefault();
-            var username = document.getElementById('username').value;
-            var email = document.getElementById('email').value;
-            var password = document.getElementById('password').value;
-            var confirmPassword = document.getElementById('confirm-password').value;
+        // Tawk.to live chat script
+        var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+        (function() {
+            var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+            s1.async = true;
+            s1.src = 'https://embed.tawk.to/your-tawkto-id/default';
+            s1.charset = 'UTF-8';
+            s1.setAttribute('crossorigin', '*');
+            s0.parentNode.insertBefore(s1, s0);
+        })();
 
-            if (username === '' || email === '' || password === '' || confirmPassword === '') {
-                alert('Please fill in all fields');
-                return;
-            }
+        // Form validation
+        document.getElementById('registerForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
 
             if (password !== confirmPassword) {
-                alert('Passwords do not match');
+                alert('Passwords do not match!');
                 return;
             }
 
-            // Add more validation logic here...
+            // Additional validation logic can be added here
 
-            // Submit the form
-            this.submit();
+            // Submit the form or perform further actions
+            alert('Form submitted successfully!');
         });
 
-        // Login form validation
-        document.getElementById('login-form').addEventListener('submit', function(event) {
+        document.getElementById('supportForm').addEventListener('submit', function(event) {
             event.preventDefault();
-            var username = document.getElementById('username').value;
-            var password = document.getElementById('password').value;
+            alert('Support request submitted successfully!');
+        });
 
-            if (username === '' || password === '') {
-                alert('Please fill in all fields');
-                return
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            // Perform login logic here
+            alert('Login form submitted!');
+        });
+
+        // Hover zoom effect
+        document.querySelectorAll('.product img').forEach(img => {
+            img.addEventListener('mouseover', function() {
+                this.style.transform = 'scale(1.2)';
+            });
+            img.addEventListener('mouseout', function() {
+                this.style.transform = 'scale(1)';
+            });
+        });
+
+        // Add to cart animation
+        document.querySelectorAll('.add-to-cart-button').forEach(button => {
+            button.addEventListener('click', function() {
+                this.classList.add('pulse');
+                setTimeout(() => {
+                    this.classList.remove('pulse');
+                }, 300);
+                addToCart(this);
+            });
+        });
+
+        // Sorting and filtering products
+        document.getElementById('sort').addEventListener('change', function() {
+            const sortBy = this.value;
+            const products = Array.from(document.querySelectorAll('.product'));
+
+            products.sort((a, b) => {
+                if (sortBy === 'name') {
+                    return a.dataset.name.localeCompare(b.dataset.name);
+                } else if (sortBy === 'price') {
+                    return parseFloat(a.dataset.price) - parseFloat(b.dataset.price);
+                }
+            });
+
+            const container = document.getElementById('product-list');
+            container.innerHTML = '';
+            products.forEach(product => container.appendChild(product));
+        });
+
+        // Cart functionality
+        const cart = [];
+
+        function addToCart(button) {
+            const product = button.closest('.product');
+            const productName = product.querySelector('h2').textContent;
+            const productPrice = parseFloat(product.dataset.price);
+            const productImg = product.querySelector('img').src;
+            const productDescription = product.querySelector('p').textContent;
+            const cartItem = { name: productName, price: productPrice, img: productImg, description: productDescription };
+
+            cart.push(cartItem);
+            updateCart();
+        }
+
+        function updateCart() {
+            const cartItemsContainer = document.getElementById('cart-items');
+            const cartTotalContainer = document.getElementById('cart-total').querySelector('span');
+            let total = 0;
+
+            cartItemsContainer.innerHTML = '';
+            cart.forEach(item => {
+                const cartItemElement = document.createElement('div');
+                cartItemElement.classList.add('cart-item');
+                cartItemElement.innerHTML = `
+                    <img src="${item.img}" alt="${item.name}">
+                    <div class="details">
+                        <span><strong>${item.name}</strong></span>
+                        <span>${item.description}</span>
+                        <span>$${item.price.toFixed(2)}</span>
+                        <button onclick="removeFromCart('${item.name}')">Remove</button>
+                    </div>`;
+                cartItemsContainer.appendChild(cartItemElement);
+                total += item.price;
+            });
+
+            cartTotalContainer.textContent = total.toFixed(2);
+
+            if (cart.length === 0) {
+                cartItemsContainer.innerHTML = '<p>No items in the cart.</p>';
+            }
+        }
+
+        function removeFromCart(name) {
+            const index = cart.findIndex(item => item.name === name);
+            if (index !== -1) {
+                cart.splice(index, 1);
+                updateCart();
+            }
+        }
+    </script>
+</body>
+</html>
