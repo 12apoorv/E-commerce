@@ -16,4 +16,23 @@
       "cors": "^2.8.5",
       "body-parser": "^1.19.0"
     }
+    {
+  "name": "e-commerce",
+  "version": "1.0.0",
+  "description": "An e-commerce application",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Your Name",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.10.9",
+    "dotenv": "^8.2.0",
+    "cors": "^2.8.5",
+    "body-parser": "^1.19.0"
+  }
+}
   }
